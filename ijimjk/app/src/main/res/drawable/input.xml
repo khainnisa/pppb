@@ -1,0 +1,8 @@
+<!-- mendefinisikan bentuk yang digunakan sebagai background aplikasi-->
+  <?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+<!--    menentukan bentuk memiliki warna hitam-->
+    <solid android:color="@color/black"></solid>
+<!--    memberikan sudut melengkung dengan radius 10dp pada bentuk-->
+    <corners android:radius="10dp"></corners>
+</shape>

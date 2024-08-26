@@ -1,0 +1,83 @@
+   <?xml version="1.0" encoding="utf-8"?>
+<!--   Elemen utama penyusun layout. LinearLayout adalah tata letak
+yang mengatur elemen anaknya secara vertikal, dengan padding 41dp disekelilingnya,
+mengatur semua elemen ke tengah-->
+<LinearLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="41dp"
+    android:gravity="center"
+    tools:context=".MainActivity">
+
+<!--    elemen teks yang menampilkan judul atau label login,
+teks diberi ukutan 24sp, letak di tengah, margin bawah 64dp, dan bold-->
+    <TextView
+        android:id="@+id/txt_counter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:layout_marginBottom="64dp"
+        android:textAlignment="center"
+        android:text="@string/login"
+        android:textStyle="bold"
+        />
+
+<!--    kolom input teks untuk memasukkan username, memiliki ukuran teks 24sp,
+margin bawah 15dp, padding awal 20dp, tinggi minimum 48dp-->
+    <EditText
+        android:id="@+id/txt_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:layout_marginBottom="15dp"
+        android:minHeight="48dp"
+        android:paddingStart="20dp"
+        android:hint="@string/username"
+        android:background="@drawable/input"
+    />
+
+<!--    kolom input untuk password, tipe input password sehingga teks disembunyikan,
+ukuran teks 24sp, tinggi minimum 48dp, padding awal 20dp-->
+    <EditText
+        android:id="@+id/txt_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:textSize="24sp"
+        android:minHeight="48dp"
+        android:paddingStart="20dp"
+        android:hint="@string/username"
+        android:background="@drawable/input"
+        />
+
+<!--    tombol utk aksi login, memiliki teks login, ukuran teks 14sp, margin atas 64dp, teks tebal-->
+<Button
+    android:id="@+id/tombol_login"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/login"
+    android:textSize="14sp"
+    android:layout_marginTop="64dp"
+    android:textStyle="bold"
+    android:backgroundTint="@color/login"
+    />
+
+<!--    elemen teks untuk menampilkan opsi regoster, diatur agar ditengah layar-->
+    <TextView
+        android:id="@+id/register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="@string/register"
+        />
+
+
+
+</LinearLayout>
+
+

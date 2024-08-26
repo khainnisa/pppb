@@ -1,0 +1,9 @@
+<!--elemen yang membungkus semua string -->
+<resources>
+<!--    mendefinisikan string-->
+    <string name="app_name">ijimjk</string>
+    <string name="login">Login</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="register">New member? <font color="#525BFF">Register</font></string>
+</resources>
