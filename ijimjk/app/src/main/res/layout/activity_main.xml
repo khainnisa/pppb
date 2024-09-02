@@ -1,7 +1,5 @@
-   <?xml version="1.0" encoding="utf-8"?>
-<!--   Elemen utama penyusun layout. LinearLayout adalah tata letak
-yang mengatur elemen anaknya secara vertikal, dengan padding 41dp disekelilingnya,
-mengatur semua elemen ke tengah-->
+<?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -75,6 +73,7 @@ ukuran teks 24sp, tinggi minimum 48dp, padding awal 20dp-->
         android:textAlignment="center"
         android:text="@string/register"
         />
+
 
 
 

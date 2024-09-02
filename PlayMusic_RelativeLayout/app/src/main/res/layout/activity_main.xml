@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--memungkinkan penempatan elemen relatif terhadap satu sama lain atau terhadap parent layout.-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:id="@+id/main"
+    tools:context="MainActivity"
+    android:background="@drawable/gradient">
+
+<!--  android:layout_alignParentStart="true"
+Menempatkan elemen di sebelah kiri parent layout. Ini digunakan untuk ImageView album cover.  -->
+<!--    android:layout_alignParentTop="true"
+Menempatkan elemen di bagian atas parent layout. Ini juga digunakan untuk ImageView album cover.-->
+    <ImageView
+        android:id="@+id/albumCover"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/coveralbum"
+        android:contentDescription="@null"/>
+
+<!--    android:layout_toEndOf="@id/albumCover"
+Menempatkan elemen di sebelah kanan elemen lain (dalam hal ini, ImageView album cover). Ini digunakan untuk TextView judul lagu.-->
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/albumCover"
+        android:layout_alignTop="@+id/albumCover"
+        android:text="@string/title"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginStart="16dp"
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="4dp"/>
+
+<!--  android:layout_below="@id/txt_title"
+
+Menempatkan elemen di bawah elemen lain (dalam hal ini, TextView judul lagu). Ini digunakan untuk TextView nama penyanyi.  -->
+    <TextView
+        android:id="@+id/txt_singer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_title"
+        android:layout_alignStart="@+id/txt_title"
+        android:text="@string/singer"
+        android:paddingTop="2dp"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/lyrics1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/albumCover"
+        android:layout_marginTop="80dp"
+        android:text="@string/lyrics1"
+        android:textSize="35sp"
+        android:paddingTop="8dp"
+        android:textColor="@android:color/white"
+        android:paddingBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/txt_lyrics2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lyrics1"
+        android:text="@string/lyrics2"
+        android:layout_marginTop="8dp"
+        android:textSize="35sp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:textColor="@android:color/white"
+        />
+
+<!--  android:layout_centerHorizontal="true"
+Menempatkan elemen di tengah secara horizontal. Digunakan pada tombol Play/Pause.  -->
+
+    <!-- Play/Pause Button -->
+    <ImageButton
+        android:id="@+id/playPauseButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_lyrics2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="230dp"
+        android:background="@null"
+        android:src="@drawable/baseline_play_arrow_24"
+        android:contentDescription="@null" />
+
+<!--    android:layout_toStartOf="@id/playPauseButton" dan android:layout_toEndOf="@id/playPauseButton"
+
+Menempatkan elemen relatif terhadap elemen lain (di sebelah kiri atau kanan). Ini digunakan pada tombol Previous dan Next, relatif terhadap tombol Play/Pause.-->
+    <!-- Previous Button -->
+<ImageButton
+    android:id="@+id/prevButton"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_toStartOf="@id/playPauseButton"
+    android:layout_alignTop="@id/playPauseButton"
+    android:layout_marginEnd="32dp"
+    android:layout_marginBottom="16dp"
+    android:background="@null"
+    android:src="@drawable/baseline_skip_previous_24"
+    android:contentDescription="@null" />
+
+
+    <!-- Next Button -->
+    <ImageButton
+        android:id="@+id/nextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/playPauseButton"
+        android:layout_alignTop="@id/playPauseButton"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="16dp"
+        android:background="@null"
+        android:src="@drawable/baseline_skip_next_24"
+        android:contentDescription="@null" />
+
+    <!--    android:layout_above="@id/playPauseButton"
+
+Menempatkan elemen di atas elemen lain. Ini digunakan untuk SeekBar kontrol volume.-->
+    <!-- Volume Control -->
+    <SeekBar
+        android:id="@+id/volumeControl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/playPauseButton"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="189dp"
+        android:max="100"
+        android:progress="30" />
+
+</RelativeLayout>
