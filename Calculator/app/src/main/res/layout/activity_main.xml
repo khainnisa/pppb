@@ -6,8 +6,12 @@
     android:layout_height="match_parent"
     android:padding="16dp">
 
+<!--    Digunakan untuk mengatur tata letak grid,
+membantu memposisikan komponen secara proporsional.-->
+
 <!--    layout_constraintGuide_percent digunakan untuk menentukan
 persentase tempat guideline ini berada pada layar.-->
+
 
 <!--    Tombol-tombol seperti angka (btn_one, btn_two, btn_three, dll.) serta operator
 (btn_plus, btn_minus, btn_equals, dll.) ditempatkan pada grid yang diatur oleh Guideline.-->
@@ -103,12 +107,12 @@ persentase tempat guideline ini berada pada layar.-->
 <!--    garis bawah-->
      <Button
         android:layout_width="130dp"
-        android:layout_height="60dp"
+        android:layout_height="10dp"
         app:layout_constraintBottom_toTopOf="@id/guideline_h1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         />
-
+1
     <!-- Tombol AC -->
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_ac"
