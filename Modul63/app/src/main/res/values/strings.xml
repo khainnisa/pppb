@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Modul 6</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <array name="kereta">
+        <item>Jakarta</item>
+        <item>Bandung</item>
+        <item>Surabaya</item>
+    </array>
+
+</resources>

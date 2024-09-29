@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--link gdrive video: https://drive.google.com/file/d/1uwq8zgdqyvn5cE-NvITKo41sLL33SAIL/view?usp=drivesdk-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pemesanan Tiket Kereta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:paddingTop="130dp"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="230dp">
+
+        <EditText
+            android:id="@+id/main_nama"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/background"
+            android:drawableStart="@drawable/__icon__person_"
+            android:drawableTint="@color/grey"
+            android:textSize="17dp"
+            android:hint="Username"
+            android:drawablePadding="10dp"
+            android:layout_marginBottom="10dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/main_jam_button"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:drawableStart="@drawable/baseline_access_time_24"
+            android:textAlignment="textStart"
+            android:background="@drawable/background"
+            android:hint="Pilih Jam Keberangkatan"
+            android:drawableTint="@color/grey"
+            android:drawablePadding="10dp"
+            android:textSize="17dp"
+            android:layout_marginBottom="10dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/main_tgl_button"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:drawableStart="@drawable/baseline_calendar_month_24"
+            app:cornerRadius="10dp"
+            android:textAlignment="textStart"
+            android:background="@drawable/background"
+            android:hint="Pilih Tanggal Keberangkatan"
+            android:drawableTint="@color/grey"
+            android:drawablePadding="10dp"
+            android:textSize="17dp"
+            android:layout_marginBottom="10dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <!-- Button untuk memilih Tujuan -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_choose_city"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawableStart="@drawable/baseline_location_on_24"
+                android:background="@drawable/background"
+                android:hint="Pilih Tujuan"
+                android:textAlignment="textStart"
+                app:cornerRadius="10dp"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/grey"
+                android:textSize="17dp"
+                android:layout_marginBottom="10dp"/>
+
+            <!-- Spinner untuk memilih kota (akan disembunyikan atau di-trigger lewat tombol) -->
+            <Spinner
+                android:id="@+id/spinner_city"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:entries="@array/kereta"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/registerButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="120dp"
+        android:background="@drawable/custombutton"
+        android:text="Register"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
