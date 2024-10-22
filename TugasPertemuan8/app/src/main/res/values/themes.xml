@@ -1,0 +1,22 @@
+
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.TugasPertemuan8" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+    </style>
+
+    <!-- Base application theme with ActionBar. -->
+    <!--  Theme nya banyak macemnya  -->
+    <style name="Base.Theme.TugasPertemuan8.WithActionBar" parent="Theme.AppCompat.DayNight">
+        <!-- Warna latar belakang ActionBar -->
+        <item name="colorPrimary">#1A00FF</item>
+        <item name="colorPrimaryVariant">#3700B3</item>
+        <!-- Warna teks judul ActionBar -->
+    </style>
+
+    <!-- Themes that can be applied to the application or specific activities. -->
+    <style name="Theme.TugasPertemuan8" parent="Base.Theme.TugasPertemuan8" />
+    <style name="Theme.TugasPertemuan8.WithActionBar" parent="Base.Theme.TugasPertemuan8.WithActionBar">
+
+    </style>
+</resources>
