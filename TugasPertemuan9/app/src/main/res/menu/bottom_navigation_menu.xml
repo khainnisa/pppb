@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/berandaFragment"
+        android:icon="@drawable/home"
+        android:title="Beranda"
+        android:iconTint="@color/orange"/>
+    <item
+        android:id="@+id/mutasiFragment"
+        android:icon="@drawable/mutasi"
+        android:title="Mutasi"
+        android:iconTint="@color/orange"/>
+    <item
+        android:id="@+id/inboxFragment"
+        android:icon="@drawable/inbox"
+        android:title="Inbox"
+        android:iconTint="@color/orange"/>
+    <item
+        android:id="@+id/profileFragment"
+        android:icon="@drawable/profile"
+        android:title="Profile"
+        android:iconTint="@color/orange"/>
+</menu>

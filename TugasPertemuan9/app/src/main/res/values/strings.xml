@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Tugas Pertemuan 9</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="selamat_malam_nama">Selamat malam, Khairunnisa</string>
+    <string name="saldo">Saldo</string>
+    <string name="shortcut">Shortcut Kamu</string>
+    <string name="transfer">Transfer Uang</string>
+    <string name="pulsa">Pulsa/Data</string>
+    <string name="virtual">Virtual Account</string>
+    <string name="menu">Menu Lengkap</string>
+    <string name="insight">Insight BNI</string>
+    <string name="pengaturan">Pengaturan</string>
+    <string name="kartu">Kartu dan Transaksional</string>
+</resources>

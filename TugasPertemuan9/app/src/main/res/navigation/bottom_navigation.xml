@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_navigation"
+    app:startDestination="@id/berandaFragment">
+
+    <fragment
+        android:id="@+id/berandaFragment"
+        android:name="com.example.tugaspertemuan9.BerandaFragment"
+        android:label="fragment_beranda"
+        tools:layout="@layout/fragment_beranda" >
+        <action
+            android:id="@+id/actionBerandaFragmentToProfileFragment"
+            app:destination="@id/profileFragment" />
+        <argument
+            android:name="username"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/inboxFragment"
+        android:name="com.example.tugaspertemuan9.InboxFragment"
+        android:label="fragment_inbox"
+        tools:layout="@layout/fragment_inbox" />
+    <fragment
+        android:id="@+id/mutasiFragment"
+        android:name="com.example.tugaspertemuan9.MutasiFragment"
+        android:label="fragment_mutasi"
+        tools:layout="@layout/fragment_mutasi" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.tugaspertemuan9.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile">
+        <argument
+            android:name="username"
+            app:argType="string" />
+    </fragment>
+</navigation>
