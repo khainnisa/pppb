@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+    <!-- Bagian ini mendefinisikan file sebagai manifest XML dan menyatakan dua namespace:
+         1. android: untuk atribut terkait Android.
+         2. tools: untuk alat pengembangan, seperti target API. -->
 
     <application
         android:allowBackup="true"
@@ -12,17 +15,40 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TugasPertemuan8"
         tools:targetApi="31">
+        <!-- Elemen <application> mendefinisikan konfigurasi aplikasi. Beberapa atribut penting adalah:
+             - allowBackup: Mengizinkan backup data aplikasi.
+             - dataExtractionRules: Menyatakan aturan untuk ekstraksi data.
+             - fullBackupContent: Menentukan konten untuk backup penuh.
+             - icon: Menentukan ikon aplikasi.
+             - label: Menentukan nama aplikasi.
+             - roundIcon: Menentukan ikon berbentuk bulat.
+             - supportsRtl: Mengaktifkan dukungan tata letak RTL (Right-To-Left).
+             - theme: Menentukan tema aplikasi.
+             - tools:targetApi: Menargetkan API level tertentu untuk alat development. -->
+
         <activity
             android:name=".HomeActivity"
             android:exported="false" />
+        <!-- Definisi Activity bernama HomeActivity.
+             - android:name: Menyatakan nama activity.
+             - android:exported: false berarti activity ini tidak dapat diakses oleh aplikasi lain. -->
+
         <activity
             android:name=".MainActivity"
             android:exported="true"
             android:theme="@style/Base.Theme.TugasPertemuan8.WithActionBar">
+            <!-- Definisi Activity bernama MainActivity.
+                 - android:name: Menyatakan nama activity.
+                 - android:exported: true berarti activity ini bisa diakses oleh aplikasi lain.
+                 - android:theme: Menyatakan tema khusus untuk activity ini (berbeda dengan tema aplikasi secara umum). -->
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+                <!-- Intent-filter ini menunjukkan bahwa MainActivity adalah entry point utama aplikasi.
+                     - android.intent.action.MAIN: Aksi utama yang dipanggil saat aplikasi dibuka pertama kali. -->
 
                 <category android:name="android.intent.category.LAUNCHER" />
+                <!-- android.intent.category.LAUNCHER: Menyatakan bahwa activity ini adalah activity yang diluncurkan dari layar utama (launcher). -->
             </intent-filter>
         </activity>
     </application>
