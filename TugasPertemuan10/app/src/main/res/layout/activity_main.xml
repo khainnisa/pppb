@@ -1,0 +1,341 @@
+<!-- res/layout/activity_main.xml -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/background_gradient">
+
+    <!-- Header -->
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:paddingStart="30dp"
+        android:background="@drawable/header_gradient"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Movie Icon -->
+        <ImageView
+            android:id="@+id/iconMovie"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/movie"
+        android:contentDescription="Movie Icon"
+            android:layout_gravity="center_vertical"/>
+
+        <!-- Movie App Text -->
+        <TextView
+            android:id="@+id/textMovieApp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="MOVIE APP"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:paddingStart="16dp"
+            android:layout_gravity="center_vertical"/>
+    </LinearLayout>
+
+    <!-- Greeting Text -->
+    <TextView
+        android:id="@+id/greetings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="What do you want to do now, User?"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="30dp"/>
+
+    <!-- Section Pilihan Kategori -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/kategori"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/greetings"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp">
+
+        <!-- Movie Section -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/movie_section"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingEnd="7dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/movie"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="2dp"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="4dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="Movie Icon"
+                    android:src="@drawable/movie"
+                    android:tint="@color/oren" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/movie_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Movie"
+                android:textSize="12sp"
+                android:layout_marginTop="4dp"
+                app:layout_constraintTop_toBottomOf="@id/movie"
+                app:layout_constraintStart_toStartOf="@id/movie"
+                app:layout_constraintEnd_toEndOf="@id/movie"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Food Section -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/food_section"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingEnd="10dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/movie_section"
+            >
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/food"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:paddingEnd="5dp"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="Movie Icon"
+                    android:src="@drawable/fastfood"
+                    android:tint="@color/hijau" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/food_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Food"
+                android:textSize="12sp"
+                android:layout_marginTop="4dp"
+                app:layout_constraintTop_toBottomOf="@id/food"
+                app:layout_constraintStart_toStartOf="@id/food"
+                app:layout_constraintEnd_toEndOf="@id/food"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Cinema Section -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cinema_section"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingEnd="10dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/food_section">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cinema"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:paddingEnd="5dp"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="Movie Icon"
+                    android:src="@drawable/airplay"
+                    android:tint="@color/coksu" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/cinema_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cinema"
+                android:textSize="12sp"
+                android:layout_marginTop="4dp"
+                app:layout_constraintTop_toBottomOf="@id/cinema"
+                app:layout_constraintStart_toStartOf="@id/cinema"
+                app:layout_constraintEnd_toEndOf="@id/cinema"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <!-- Private Booking Section -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/booking_section"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingEnd="10dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/cinema_section"
+            >
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/booking"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:paddingEnd="5dp"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="Movie Icon"
+                    android:src="@drawable/chair"
+                    android:tint="@color/biru" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/booking_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Private Booking"
+                android:textSize="12sp"
+                android:layout_marginTop="4dp"
+                app:layout_constraintTop_toBottomOf="@id/booking"
+                app:layout_constraintStart_toStartOf="@id/booking"
+                app:layout_constraintEnd_toEndOf="@id/booking"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Daftar Film Section Title -->
+    <TextView
+        android:id="@+id/judul_film"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OUR HOTTEST MOVIE"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginStart="30dp"
+        app:layout_constraintTop_toBottomOf="@id/kategori"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <!-- RecyclerView for Movies -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvMovies"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/item_movies"
+        android:paddingTop="8dp"
+        tools:itemCount="4"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="4dp"
+        android:scrollbars="vertical"
+        app:layout_constraintTop_toBottomOf="@id/judul_film"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+<!--    bottom navbar-->
+
+    <!-- Custom Bottom Navigation Bar -->
+    <!-- Custom Bottom Navigation Bar in a Single CardView -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/customBottomNavCard"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_margin="8dp"
+        android:background="?android:attr/windowBackground"
+        app:cardCornerRadius="25dp"
+        app:cardElevation="4dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <!-- Icon Home -->
+            <ImageView
+                android:id="@+id/iconHome"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/home"
+                android:contentDescription="Home Icon"
+                android:padding="8dp"
+                android:scaleType="centerInside" />
+
+            <!-- Icon List -->
+            <ImageView
+                android:id="@+id/iconList"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/notes"
+                android:contentDescription="List Icon"
+                android:padding="8dp"
+                android:scaleType="centerInside" />
+
+            <!-- Icon Settings -->
+            <ImageView
+                android:id="@+id/iconSettings"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/disc"
+                android:contentDescription="Settings Icon"
+                android:padding="8dp"
+                android:scaleType="centerInside" />
+
+            <!-- Icon Profile -->
+            <ImageView
+                android:id="@+id/iconProfile"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/user"
+                android:contentDescription="Profile Icon"
+                android:padding="8dp"
+                android:scaleType="centerInside" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
