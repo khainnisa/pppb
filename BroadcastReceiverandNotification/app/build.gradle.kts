@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.tugaspertemuan11retrofit"
-    compileSdk = 35
+    namespace = "com.example.broadcastreceiverandnotification"
+    compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.tugaspertemuan11retrofit"
+        applicationId = "com.example.broadcastreceiverandnotification"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -48,10 +48,4 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-
-    implementation(libs.retrofit)
-    implementation(libs.convertGson)
-    implementation(libs.loggingInterceptor)
-
-    implementation(libs.picasso)
 }

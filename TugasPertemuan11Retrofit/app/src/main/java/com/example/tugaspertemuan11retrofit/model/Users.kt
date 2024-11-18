@@ -1,3 +1,8 @@
 package com.example.tugaspertemuan11retrofit.model
 
-data class Users()
+import com.google.gson.annotations.SerializedName
+
+data class Users(
+    @SerializedName("data")
+    val `data`: List<Data>
+)
