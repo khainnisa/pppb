@@ -1,69 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="16dp">
+    <!-- TextView untuk Counter Ganteng -->
+    <TextView
+        android:id="@+id/txtLike"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Counter Suka: 0"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Apakah Hanip Ganteng?"
-            android:textSize="20sp"
-            android:layout_gravity="center_horizontal" />
+    <!-- TextView untuk Counter Jelek -->
+    <TextView
+        android:id="@+id/txtDislike"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Counter Tidak Suka: 0"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@id/txtLike"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center">
-
-            <ImageView
-                android:id="@+id/btn_like"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/thump_up"
-                android:contentDescription="Like" />
-
-            <TextView
-                android:id="@+id/tv_like_count"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0"
-                android:layout_marginStart="8dp" />
-
-            <ImageView
-                android:id="@+id/btn_dislike"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/thumb_down"
-                android:layout_marginStart="32dp"
-                android:contentDescription="Dislike" />
-
-            <TextView
-                android:id="@+id/tv_dislike_count"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0"
-                android:layout_marginStart="8dp" />
-        </LinearLayout>
-
-        <Button
-            android:id="@+id/btn_send_notification"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Kirim Notifikasi"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="16dp" />
-    </LinearLayout>
-
+    <!-- Button untuk Menampilkan Notifikasi -->
+    <Button
+        android:id="@+id/btnNotif"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tampilkan Notifikasi"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/txtDislike"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
