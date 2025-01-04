@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/atas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@xml/ic_arrow_back"/>
+
+        <TextView
+            android:id="@+id/iknip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="_iknip"
+            android:layout_alignLeft="@id/back"
+            android:layout_marginLeft="40dp"/>
+
+        <ImageView
+            android:id="@+id/lonceng"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@xml/ic_bell"
+            android:layout_alignLeft="@id/iknip"
+            android:layout_marginLeft="280dp"
+            android:layout_marginTop="5dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/lonceng"
+            android:src="@xml/ic_titik_tiga"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="40dp"
+            />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/atas">
+        <ImageView
+            android:id="@+id/imguser"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/pp" />
+
+        <LinearLayout
+            android:id="@+id/postingan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignLeft="@id/imguser"
+            android:layout_marginLeft="20dp"
+            >
+            <TextView
+                android:id="@+id/jumlahPostingan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6956"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Postingan"
+                android:layout_below="@id/jumlahPostingan"
+                android:layout_gravity="center"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/pengikut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignLeft="@id/postingan"
+            android:layout_marginLeft="25dp"
+            >
+            <TextView
+                android:id="@+id/jumlahPengikut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="27,7jt"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pengikut"
+                android:layout_below="@id/jumlahPengikut"
+                android:layout_gravity="center"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mengikuti"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignLeft="@id/pengikut"
+            android:layout_marginLeft="25dp"
+
+            >
+            <TextView
+                android:id="@+id/jumlahMengikuti"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="219"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mengikuti"
+                android:layout_below="@id/jumlahMengikuti"
+                android:layout_gravity="center"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/tulisan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profile"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp">
+
+        <TextView
+            android:id="@+id/nama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ikhwan Hanipp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Programmer"
+            android:textColor="@color/gray"
+            android:layout_below="@id/nama"/>
+
+        <TextView
+            android:id="@+id/bio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="You might not think that programmers are artists, but programming is an extremely creative profession."
+            android:layout_below="@id/status"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tulisan"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp">
+
+        <TextView
+            android:id="@+id/editPro"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Edit Profile"/>
+        <TextView
+            android:layout_width="2000dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/editPro"
+            android:layout_marginLeft="150dp"
+            android:gravity="center"
+            android:text="Bagikan Profile"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/tigaElemen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edit"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp">
+
+        <ImageView
+            android:id="@+id/grid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@xml/ic_feed"/>
+
+        <ImageView
+            android:id="@+id/reels"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@xml/ic_reels"
+            android:layout_alignLeft="@id/grid"
+            android:layout_marginLeft="150dp"/>
+
+        <ImageView
+            android:id="@+id/profileUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@xml/ic_profile"
+            android:layout_alignLeft="@id/grid"
+            android:layout_marginLeft="300dp"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/navbarProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="410dp"
+        android:layout_below="@id/tigaElemen">
+
+        <ImageView
+            android:id="@+id/home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@xml/ic_home"/>
+
+        <ImageView
+            android:id="@+id/search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@xml/ic_search"
+            android:layout_marginLeft="50dp"/>
+
+        <ImageView
+            android:id="@+id/post"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@xml/ic_upload"
+            android:layout_marginLeft="60dp"/>
+
+        <ImageView
+            android:id="@+id/reelsAcc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@xml/ic_reels"
+            android:layout_marginLeft="70dp"/>
+
+        <ImageView
+            android:id="@+id/profileAct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@xml/ic_profile_active"
+            android:layout_marginLeft="60dp"/>
+    </LinearLayout>
+
+</RelativeLayout>
